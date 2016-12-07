@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+    <% @ads.each  do |ad| %>
+     
+      <div class="col-md-2">
+        <%= image_tag ad.image ,class: "img-responsive" %>        
+      </div>
+     
+      <div class="col-md-10">
+        <div class="col-md-12">
+          <h4><%= link_to ad.name, ad %></h4>  
+        </div>
+        <div class="col-md-6">
+          <strong>Size: </strong><%= ad.size %>
+        </div>  
+        <div class="col-md-6">
+          <strong>Base: </strong><%= ad.base %>
+        </div>  
+        <div class="col-md-6">
+          <strong>Colour: </strong><%= ad.colour %>
+        </div>  
+        
+      </div>
+      
+      <div class="col-md-12">
+        <hr>
+      </div>
+      
+    <% end %>
+
+
+
